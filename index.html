@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNCWeather</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item">DNCWeather</div>
+        <div class="item2">
+            <p>
+                Endereço
+            </p>
+            <p>
+                Previsão do tempo
+            </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <p>
+            Descubra Mais com Precisão: <br> 
+            Previsões do Tempo e endereços <br> 
+            em tempo real.
+        </p>
+        <img src="./images/image 2.svg">
+    </div>
+
+    <form onsubmit="event.preventDefault(); getAddressByCep(); getPrevisao();">
+       <div class="formbox">
+        <label id="nome">Primeiro Nome:</label><br>
+        <input placeholder="Insira seu primeiro nome:">
+
+        <label id="email">E-mail:</label><br>
+        <input placeholder="Insira seu e-mail:">
+
+        <label class="cep">Digite o CEP:</label><br>
+        <input type="text" class="form-control" id="cep" value="" placeholder="Insira seu CEP:" minlength="7" maxlength="8">
+
+        <div class="previsao">
+            <label>Digite a latitude e longitude para saber a previsão:</label>
+           <div>
+            <input id="latitude" placeholder="Latitude:">
+            <input id="longitude" placeholder="Longitude:">
+           </div>
+        </div>
+
+        <button type="submit">Acessar</button>
+       </div>
+    </form>
+
+   
+    <div class="loc">
+        <h1>Resultado da busca por CEP:</h1>
+        <img src="./images/image3.svg">
+    </div>
+
+    <div class="infobox">
+        <div class="info">
+            <p>Logradouro/nome</p>
+            <p>Bairro/Distrito</p>
+            <p>Localidade/UF</p>
+        </div>
+
+        <div class="result">
+            <p id="rua"></p>
+            <p id="bairro"></p>
+            <p id="cidade"></p>
+        </div>
+    </div>
+
+    <div class="resprev">
+        <h1>Previsão do tempo na região</h1>
+        <img src="./images/image 4.svg">
+    </div>
+
+    <div class="reg" id="temp">
+        <h3>Previsão do tempo na região:</h3>
+    </div>
+
+    <div class="rod">
+        <p>
+            Termos de Uso | Política de Privacidade
+        </p>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
